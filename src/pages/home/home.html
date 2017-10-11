@@ -1,14 +1,40 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Ionic Blank
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                This is the title
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            This is the content
+        </ion-card-content>
+    </ion-card>
+
+    <ion-toolbar>
+        <ion-segment [(ngModel)]="currentlySelected">
+            <ion-segment-button value="first">First</ion-segment-button>
+            <ion-segment-button value="second">Second</ion-segment-button>
+            <ion-segment-button value="third">Third</ion-segment-button>
+        </ion-segment>
+    </ion-toolbar>
+
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>
+                You have selected {{currentlySelected}}
+            </ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            You have selected {{currentlySelected}}
+        </ion-card-content>
+    </ion-card>
+
 </ion-content>
